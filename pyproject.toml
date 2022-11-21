@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "unc"
+version = "0.0"
+requires-python = ">3.7"
+
+
+[project.optional-dependencies]
+test = ["pytest","uncertainties"]
+
+[tool.mypy]
+strict = true
+
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+filterwarnings = ["error"]
+testpaths = ["tests"]
