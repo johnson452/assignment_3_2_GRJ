@@ -33,4 +33,4 @@ jobs:
     #    conda install pytest
     #    pytest
     - name: unc_tests
-      run: nox -s tests
+      run: pipx run nox -s tests
