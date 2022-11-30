@@ -34,3 +34,5 @@ jobs:
     #    pytest
     - name: unc_tests
       run: pipx run nox -s tests
+    - name: PRE-COMMIT
+      run: pipx run pre-commit run -a
